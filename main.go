@@ -29,6 +29,8 @@ func main() {
 		err := system.AddRoom("room1", 5)
 		if err != nil {
 			fmt.Println("Error:", err)
+		} else {
+			fmt.Println("Room 'room1' with capacity 5 added successfully.")
 		}
 
 		message, err := system.Book("room1", "2023-01-08 10:00", 2, 2)

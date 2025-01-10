@@ -56,7 +56,7 @@ func (bs *BookingSystem) Book(roomID, startTimeStr string, durationHours, capaci
 	endTime := startTime.Add(time.Duration(durationHours) * time.Hour)
 
 	for _, booking := range room.Bookings {
-		if !(endTime.Before(booking.StartTime) || startTime.After(booking.EndTime)) {
+		if startTime.Before(booking.EndTime) && endTime.After(booking.StartTime) {
 			return "", fmt.Errorf("booking conflict detected")
 		}
 	}
