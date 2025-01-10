@@ -6,7 +6,6 @@ import (
 
 	"github.com/brothergiez/assessment/anagram"
 	"github.com/brothergiez/assessment/bookingsystem"
-	"github.com/brothergiez/assessment/calculate"
 )
 
 func main() {
@@ -46,20 +45,6 @@ func main() {
 		} else {
 			fmt.Println(message)
 		}
-
-	case "calculate":
-		items := []map[string]interface{}{
-			{"name": "Apple", "price": "10", "quantity": 2},
-			{"name": "Orange", "price": "5", "quantity": 3},
-		}
-
-		total, err := calculate.CalculateTotal(items)
-		if err != nil {
-			fmt.Println("Error:", err)
-			return
-		}
-
-		fmt.Println("Total Price:", total)
 
 	default:
 		fmt.Println("Unknown command. Use 'anagram' or 'booking'.")

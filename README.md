@@ -55,18 +55,6 @@ Memesan room1 mulai jam 10:00 selama 2 jam
 Error: booking conflict detected
 ```
 
-### 3. Calculate Logic
-Description: Calculate the total cost of items based on price and quantity.
-#### Run the Calculate Logic:
-```sh
-go run main.go calculate
-```
-
-#### Output: 
-```sh
-Total Price: 35
-```
-
 ---
 
 ## Testing
@@ -87,11 +75,6 @@ go test ./anagram -v
 #### 2. Booking System :
 ```sh
 go test ./bookingsystem -v
-```
-
-#### 3. Calculate Logic:
-```sh
-go test ./calculate -v
 ```
 
 ### Test Output
@@ -144,5 +127,4 @@ ok      github.com/brothergiez/assessment/bookingsystem (cached)
     --- PASS: TestCalculateTotal/Invalid_quantity_value (0.00s)
     --- PASS: TestCalculateTotal/Empty_input (0.00s)
 PASS
-ok      github.com/brothergiez/assessment/calculate     (cached)
 ```
